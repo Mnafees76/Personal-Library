@@ -1,6 +1,6 @@
 import streamlit as st
 import json
-import time  # Delay ke liye (animation effect ke liye)
+import time  # For delay (animation effect)
 
 # 📚 Function to load the library from a JSON file
 def load_library():
@@ -8,7 +8,7 @@ def load_library():
         with open("library.json", "r") as file:
             return json.load(file)
     except FileNotFoundError: 
-        return []  # Agar file na mile to khaali list return kare
+        return []  # Return an empty list if the file is not found
 
 # 💾 Function to save the library into a JSON file
 def save_library():
@@ -100,4 +100,4 @@ elif menu == "💾 Save and Exit":
 
 # 📌 Project Creator's Name
 st.markdown("---")
-st.markdown("### 👨‍💻 **Project by Muhammad Nafees**")  
+st.markdown("### 👨‍💻 **Project by Muhammad Nafees**")
